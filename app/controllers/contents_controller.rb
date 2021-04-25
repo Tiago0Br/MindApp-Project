@@ -3,6 +3,11 @@ class ContentsController < ApplicationController
     def index
         @contents = current_user.contents
     end
+
+    def show
+        @content = Content.find(params[:id])
+    end
+
     def new
         @content = Content.new
     end
@@ -10,14 +15,23 @@ class ContentsController < ApplicationController
     def create
         @content = current_user.contents.build(content_params)
         if @content.save
-            redirect_to contents_path, notice: 'Content succesfully created'
+            redirect_to contents_path, notice: 'Content succesfully created!'
         else
             render :new
         end
     end
-
+    
     def edit
         @content = Content.find(params[:id])
+    end
+
+    def update
+        @content = Content.find(params[:id])
+        if @content.update(content_params)
+            redirect_to contents_path, notice: 'Content succesfully updated!'
+        else
+            render :edit
+        end
     end
 
     private
