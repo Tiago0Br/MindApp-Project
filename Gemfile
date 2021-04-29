@@ -6,7 +6,7 @@ ruby '2.6.6'
 
 gem 'rails', '~> 6.1.1'
 
-gem 'sqlite3', '~> 1.4'
+gem 'pg', '1.2.3'
 
 gem 'puma', '~> 5.0'
 
