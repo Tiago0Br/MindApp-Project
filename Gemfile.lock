@@ -97,6 +97,7 @@ GEM
     nokogiri (1.11.3-x64-mingw32)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.2.3-x64-mingw32)
     puma (5.2.2)
       nio4r (~> 2.0)
     racc (1.5.2)
@@ -134,6 +135,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 1.0)
     rake (13.0.3)
+    redcarpet (3.5.1)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -207,9 +209,11 @@ DEPENDENCIES
   byebug
   devise (~> 4.7)
   jbuilder (~> 2.7)
+  pg (= 1.2.3)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
+  redcarpet (= 3.5.1)
   rspec-rails
   sass-rails (>= 6)
   sqlite3 (~> 1.4)
